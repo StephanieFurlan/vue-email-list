@@ -2,7 +2,8 @@
 // new Vue({
 //    el:"#app",
 //    data: {
-//       emails: []
+//       emails: [],
+//       numberOfEmails: 10
 //    },
 //    methods: {
 //       getEmail() {
@@ -16,7 +17,7 @@
 //    },
 //    mounted: function() {
 //       // fullfill email list
-//       for(var i=0; i< 10; i++){
+//       for(var i=0; i< this.numberOfEmails; i++){
 //          this.getEmail();
 //       }
 //    }
@@ -28,14 +29,15 @@
 // new Vue({
 //    el:"#app",
 //    data: {
-//       emails: []
-//    },
+//       emails: [],
+//       numberOfEmails: 10
+// },
 //    methods: {
 //
 //    },
 //    mounted: function() {
 //       // fullfill email list
-//       for (var i = 0; i < 10; i++) {
+//       for (var i = 0; i < this.numberOfEmails; i++) {
 //          axios
 //          .get('https://flynn.boolean.careers/exercises/api/random/mail')
 //          .then(response => {
@@ -49,14 +51,15 @@
 new Vue({
    el:"#app",
    data: {
-      emails: []
+      emails: [],
+      numberOfEmails: 10
    },
    methods: {
 
    },
    mounted: function() {
       let promises = [];
-      for (i = 0; i < 10; i++) {
+      for (i = 0; i < this.numberOfEmails; i++) {
         promises.push(
            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
         );

@@ -18,7 +18,7 @@
             <h1>Email List</h1>
          </header>
 
-         <ul class="email-list" v-if="emails.length == 10">
+         <ul class="email-list" v-if="emails.length == numberOfEmails">
             <li v-for="email in emails">{{email}}</li>
          </ul>
       </div>
