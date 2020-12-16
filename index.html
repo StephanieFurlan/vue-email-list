@@ -13,7 +13,11 @@
    </head>
    <body>
       <div id="app">
-         <h1>Email List</h1>
+         <header>
+            <i class="fas fa-envelope"></i>
+            <h1>Email List</h1>
+         </header>
+
          <ul class="email-list" v-if="emails.length == 10">
             <li v-for="email in emails">{{email}}</li>
          </ul>
